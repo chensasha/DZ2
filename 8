@@ -1,0 +1,28 @@
+#include <iostream>;
+
+using namespace std;
+
+int proper_fraction (int n)
+{
+    int m;
+    m=1;
+    for (int i=1; i<=n; i++)
+    {
+        for (int j=2; j<=n; j++)
+        {
+            if (i%j==0 && n%j==0)
+            {
+                m++;
+            }
+        }
+    }
+    return m;
+}
+
+int main ()
+{
+    int n, m;
+    cin>>n;
+    cout<<proper_fraction(n);
+    return 0;
+}
